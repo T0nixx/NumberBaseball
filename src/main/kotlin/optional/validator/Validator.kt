@@ -16,17 +16,17 @@ enum class InputType {
             return when (inputType) {
                 NUMBER_STRING -> {
                     arrayOf(
-                        StartWithZeroValidator,
-                        UniquenessValidator,
+                        startWithZeroValidator,
+                        uniquenessValidator,
                     )
                 }
 
                 USER_INPUT -> {
                     arrayOf(
-                        IsNumericValidator,
-                        LengthValidator,
-                        StartWithZeroValidator,
-                        UniquenessValidator,
+                        isNumericValidator,
+                        lengthValidator,
+                        startWithZeroValidator,
+                        uniquenessValidator,
                     )
                 }
             }
