@@ -11,7 +11,9 @@ data class ValidationSuccess<T>(val data: T) : ValidationResult<T>
 
 class Validator {
     companion object {
-        fun validateNumberString(numberString: String): ValidationResult<String> {
+        fun validateNumberString(
+            numberString: String,
+        ): ValidationResult<String> {
             if (numberString.toSet().size != numberString.length) {
                 return ValidationFailure(
                     numberString,

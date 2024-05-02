@@ -5,10 +5,10 @@ class Umpire(answer: String, userAnswer: String) {
     private var ball: Int = 0
 
     init {
-        userAnswer.forEachIndexed { i, ch ->
-            if (ch == answer[i]) {
+        userAnswer.forEachIndexed { i, char ->
+            if (char == answer[i]) {
                 strike++
-            } else if (ch in answer) {
+            } else if (char in answer) {
                 ball++
             }
         }

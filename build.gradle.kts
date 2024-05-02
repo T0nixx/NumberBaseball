@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.23"
+    id("org.jmailen.kotlinter") version "4.3.0"
 }
 
 group = "org.example"
