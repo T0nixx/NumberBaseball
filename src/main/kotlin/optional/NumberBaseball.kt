@@ -1,26 +1,17 @@
 package optional
 
-import kotlin.random.Random
+import optional.validator.Validator
+import optional.validator.ValidationResult
+import optional.validator.ValidationSuccess
+import optional.validator.ValidationFailure
+import optional.validator.InputType
 
 const val MESSAGE_ON_THREE_STRIKE = "정답입니다."
 
-class NumberBaseball {
-    private fun generateAnswer(): String {
-        var randomNumber = Random.nextInt(100, 999)
-
-        while (Validator.validateNumberString(
-                randomNumber.toString(),
-            ) is ValidationFailure
-        ) {
-            randomNumber = Random.nextInt(100, 999)
-        }
-
-        return randomNumber.toString()
-    }
-
+class NumberBaseball(private val answerGenerator: AnswerGenerator) {
     private fun playGame(gameCount: Int) {
         println("< 게임을 시작합니다. >")
-        val answer = generateAnswer()
+        val answer = answerGenerator.generateAnswer()
         var tryCount = 0
         while (true) {
             var validationResult: ValidationResult<String>? = null
@@ -31,8 +22,12 @@ class NumberBaseball {
                 println("정답이라고 생각하는 3자리 숫자를 입력해주세요")
                 println("0은 백의 자리의 수에 들어갈 수 없고 각 자릿수는 중복되어서는 안됩니다.")
                 val userInput = readlnOrNull()
-
-                validationResult = Validator.validateUserInput(userInput)
+                if (userInput == null) {
+                    println("입력된 값이 null 입니다.")
+                    continue
+                }
+                validationResult =
+                    Validator.validate(userInput, InputType.USER_INPUT)
             }
 
             tryCount += 1
@@ -45,7 +40,7 @@ class NumberBaseball {
             val hint = umpire.getHint()
             println(hint)
         }
-        GameLogger.logGame(GameLog(gameCount = gameCount, tryCount = tryCount))
+        GameLogger.logGame(GameLog(gameCount, tryCount))
     }
 
     fun start() {

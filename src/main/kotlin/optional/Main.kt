@@ -1,5 +1,11 @@
 package optional
 
 fun main() {
-    NumberBaseball().start()
+    try {
+        NumberBaseball(AnswerGenerator()).start()
+    } catch (e: Error) {
+        println("처리되지 않은 예외입니다.")
+        println(e.message)
+        println(e.cause)
+    }
 }
