@@ -9,6 +9,8 @@ data class ValidationFailure<T>(
 
 data class ValidationSuccess<T>(val data: T) : ValidationResult<T>
 
+const val VALID_NUMBER_LENGTH = 3
+
 class Validator {
     companion object {
         fun validateNumberString(
@@ -41,7 +43,7 @@ class Validator {
                 )
             }
 
-            if (numberInput.length != 3) {
+            if (numberInput.length != VALID_NUMBER_LENGTH) {
                 return ValidationFailure(
                     numberInput,
                     "입력된 숫자 ${numberInput}이 세자리 숫자가 아닙니다.",
