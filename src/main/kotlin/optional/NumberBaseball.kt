@@ -1,10 +1,10 @@
 package optional
 
-import optional.validator.Validator
+import optional.validator.InputType
+import optional.validator.ValidationFailure
 import optional.validator.ValidationResult
 import optional.validator.ValidationSuccess
-import optional.validator.ValidationFailure
-import optional.validator.InputType
+import optional.validator.Validator
 
 const val MESSAGE_ON_THREE_STRIKE = "정답입니다."
 
