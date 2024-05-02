@@ -34,7 +34,7 @@ class Validator {
             if (numberInput.isNullOrBlank()) {
                 return ValidationFailure(numberInput, "입력된 값이 null이거나 없습니다.")
             }
-            if (numberInput.toDoubleOrNull() == null) {
+            if (numberInput.toIntOrNull() == null) {
                 return ValidationFailure(
                     numberInput,
                     "입력된 값 ${numberInput}이 숫자가 아닙니다.",
