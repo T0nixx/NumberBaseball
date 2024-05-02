@@ -39,7 +39,7 @@ class Validator {
             if (numberInput.toIntOrNull() == null) {
                 return ValidationFailure(
                     numberInput,
-                    "입력된 값 ${numberInput}이 숫자가 아닙니다.",
+                    "입력된 값 ${numberInput}이 정수가 아닙니다.",
                 )
             }
 
