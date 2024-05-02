@@ -1,6 +1,6 @@
 package optional.validator
 
-class StringChainValidator(private vararg val validators: StringValidator) :
+class StringChainValidator(private val validators: Array<StringValidator>) :
     StringValidator {
     override fun validate(input: String): ValidationResult<String> {
         var result: ValidationResult<String> = ValidationSuccess(input)

@@ -32,7 +32,7 @@ object Validator {
         inputType: InputType,
     ): ValidationResult<String> {
         return StringChainValidator(
-            *inputType.validators,
+            inputType.validators,
         ).validate(
             input,
         )
