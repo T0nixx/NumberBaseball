@@ -71,3 +71,12 @@ optional 패키지는 프로그램이 실행되면 메뉴를 입력받습니다.
 
 [Velog Link](https://velog.io/@wl763/Kotlin-%EC%B1%85%EC%9E%84-%EC%97%B0%EC%87%84-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-Validation-%EA%B5%AC%ED%98%84)
 
+## Environment
+
+- IDE : IntelliJ unlimited
+
+- Language : Kotlin
+
+- JDK : temurin-21.0.3
+
+- Kotlin : 1.9.20
