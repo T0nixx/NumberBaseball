@@ -31,8 +31,8 @@ class NumberBaseball {
                 if (validationResult is ValidationFailure) {
                     println(validationResult.message)
                 }
-                println("정답이라고 생각하는 3자리 숫자를 입력해주세요")
-                println("0은 포함될 수 없고 각 자릿수는 중복되어서는 안됩니다.")
+                println("\n정답이라고 생각하는 3자리 숫자를 입력해주세요")
+                println("0은 포함될 수 없고 각 자릿수는 중복되어서는 안됩니다.\n")
                 val userInput = readlnOrNull()
 
                 validationResult = Validator.validateUserInput(userInput)

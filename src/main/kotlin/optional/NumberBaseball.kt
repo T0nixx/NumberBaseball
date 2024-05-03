@@ -19,8 +19,8 @@ class NumberBaseball(private val answerGenerator: AnswerGenerator) {
                 if (validationResult is ValidationFailure) {
                     println(validationResult.message)
                 }
-                println("정답이라고 생각하는 3자리 숫자를 입력해주세요")
-                println("0은 백의 자리의 수에 들어갈 수 없고 각 자릿수는 중복되어서는 안됩니다.")
+                println("\n정답이라고 생각하는 3자리 숫자를 입력해주세요")
+                println("0은 백의 자리의 수에 들어갈 수 없고 각 자릿수는 중복되어서는 안됩니다.\n")
                 val userInput = readlnOrNull()
                 if (userInput == null) {
                     println("입력된 값이 null 입니다.")
