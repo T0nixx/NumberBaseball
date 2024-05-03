@@ -1,6 +1,6 @@
 package optional
 
-import optional.validator.InputType
+import optional.validator.ValidationType
 import optional.validator.ValidationFailure
 import optional.validator.ValidationResult
 import optional.validator.ValidationSuccess
@@ -27,7 +27,7 @@ class NumberBaseball(private val answerGenerator: AnswerGenerator) {
                     continue
                 }
                 validationResult =
-                    Validator.validate(userInput, InputType.USER_INPUT)
+                    Validator.validate(userInput, ValidationType.USER_INPUT)
             }
 
             tryCount += 1

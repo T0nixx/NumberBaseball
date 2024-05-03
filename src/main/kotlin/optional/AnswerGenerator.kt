@@ -1,6 +1,6 @@
 package optional
 
-import optional.validator.InputType
+import optional.validator.ValidationType
 import optional.validator.ValidationFailure
 import optional.validator.Validator
 import kotlin.random.Random
@@ -10,7 +10,7 @@ class AnswerGenerator {
         var randomNumber = Random.nextInt(100, 999)
         while (Validator.validate(
                 randomNumber.toString(),
-                InputType.NUMBER_STRING,
+                ValidationType.NUMBER_STRING,
             ) is ValidationFailure
         ) {
             randomNumber = Random.nextInt(100, 999)
