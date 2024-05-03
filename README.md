@@ -6,8 +6,6 @@
 
 ## Requisite, Optional
 
----
-
 ### Requisite
 
 Requisite 패키지는 과제의 필수 조건만을 구현했습니다.
