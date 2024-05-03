@@ -9,7 +9,7 @@ object GameLogger {
     private val logs = ArrayList<GameLog>()
 
     fun showLogs() {
-        println("< 게임 기록 보기 >")
+        println("\n< 게임 기록 보기 >")
         logs.run {
             if (isEmpty()) println("기록된 게임이 없습니다.")
             forEach { (gameCount, tryCount) ->

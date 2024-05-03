@@ -10,7 +10,7 @@ const val MESSAGE_ON_THREE_STRIKE = "정답입니다."
 
 class NumberBaseball(private val answerGenerator: AnswerGenerator) {
     private fun playGame(gameCount: Int) {
-        println("< 게임을 시작합니다. >")
+        println("\n< 게임을 시작합니다. >")
         val answer = answerGenerator.generateAnswer()
         var tryCount = 0
         while (true) {
@@ -48,7 +48,7 @@ class NumberBaseball(private val answerGenerator: AnswerGenerator) {
         println("환영합니다! 원하시는 번호를 입력해주세요.")
 
         while (true) {
-            println("1. 게임 시작하기 2. 게임 기록 보기 3. 종료하기")
+            println("\n1. 게임 시작하기 2. 게임 기록 보기 3. 종료하기")
             val selectedMenu = readlnOrNull()
             when (selectedMenu) {
                 "1" -> playGame(++gameCount)
